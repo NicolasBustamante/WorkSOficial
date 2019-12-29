@@ -1,13 +1,36 @@
 import 'package:flutter/material.dart';
 
-class Solicitudes extends StatelessWidget{
-  static String tag = 'solicitudes-page';
+class SolicitudesPage extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return SolicitudesState();
+  }
+}
 
+class SolicitudesState extends State<SolicitudesPage>{
   @override
   Widget build(BuildContext context) {
-
-
-    // TODO: implement build
-    return null;
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Solicitudes'),
+          bottom: TabBar(
+            tabs: <Widget>[
+              Tab(
+                text: 'Activas',
+              ),
+              Tab(
+                text: 'Concretadas',
+              ),
+              Tab(
+                text: 'Fallidas',
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

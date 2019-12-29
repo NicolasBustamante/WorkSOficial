@@ -5,9 +5,10 @@ class Ayuda extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-
-
-    // TODO: implement build
-    return null;
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Ayuda"),
+      )
+    );
   }
 }
